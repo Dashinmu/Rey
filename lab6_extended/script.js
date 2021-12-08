@@ -540,7 +540,7 @@ function task37() {
         document.querySelector("#check").setAttribute("checked", true);
     });
     document.querySelector("#button-off").addEventListener("click", function() {
-        document.querySelector("#check").setAttribute("checked", true);
+        document.querySelector("#check").removesAttribute("checked", true);
     });
 }
 
@@ -1206,7 +1206,7 @@ function task74() {
 
         document.querySelector("#table").appendChild(tr);
     }
-    ages = document.querySelectorAll(".salary");
+    ages = document.querySelectorAll(".age");
     for (let i = 0; i < employees.length; i++) {
         ages[i].addEventListener("click", function() {
             ages[i].textContent++;
@@ -1583,13 +1583,32 @@ function task87() {
     }
 
 
-    
+    //функция инициализации
+    function Start() {
+        let staff = document.querySelectorAll("#table tr");
+        for (let cnt = 0; cnt < staff.length; cnt++) {
+            CreateEmployeeEditBtn(staff, cnt);
+            CreateDeleteBtn(staff, cnt);
+        }
+        return staff;
+    }
 
+
+    var staff_old = Start();
+    var cnt_edit_btn = document.querySelectorAll(".input");
+    var cnt_delete_btn = document.querySelectorAll(".delete_btn");
+
+    
     //МЕСТО ДЛЯ ОСНОВНОГО КОДА
     document.querySelector("#new").addEventListener("click", AddNewEmployee);
+    for (let i = 0; i < cnt_edit_btn.length; i++) {
+        cnt_edit_btn[i].addEventListener("keydown", function(event) {
+            if (event.key == "Enter") {
+                EditEmployee(cnt_edit_btn[i], i);
+            }
+        });
+    }
     //МЕСТО ДЛЯ ОСНОВНОГО КОДА
-
-
 
     
     //Запись нового сотрудника в таблицу
@@ -1612,6 +1631,7 @@ function task87() {
             td_new.textContent = its_salary;
             tr_new.appendChild(td_new);
         document.querySelector("#table").appendChild(tr_new);
+        Update();
     }
 
     //Добавление кнопки удалить сотрудника (для какой-то x строки из элементов cnt)
@@ -1625,8 +1645,11 @@ function task87() {
     };
 
     //Удаление сотрудника
-    function DeleteEmployee(cnt, x) {
-        cnt[x].remove();
+    function DeleteEmployee(x) {
+        /* let staff = document.querySelectorAll("#table tr");
+        staff[x].remove();
+        staff_old = staff; */
+        staff_old[x].remove();
     }
 
     //Добавление кнопки редактироания сотрудника
@@ -1637,44 +1660,48 @@ function task87() {
     }
 
     //Редактирование сотрудника
-    function EditEmployee(staff, j, flag) {
-        if (flag != 1) {
-            let input = document.createElement("td");
-            input.innerHTML = `<input class = "input" type = "text" value = "NAME AGE SALARY">`;
-            /* input.setAttribute("class", "input");
-            input.setAttribute("type", "text");
-            input.setAttribute("value", "Name Age Salary"); */
-            staff[j].appendChild(input);
-            let employee_inf = document.querySelector(".input").value.split(" ");
-            
-            let tr_new = document.createElement("tr");
-            let td_new = document.createElement("td");
-                td_new.classList.add("name");
-                td_new.textContent = employee_inf[0];
-                tr_new.appendChild(td_new);
-            td_new = document.createElement("td");
-                td_new.classList.add("age");
-                td_new.textContent = employee_inf[1];
-                tr_new.appendChild(td_new);
-            td_new = document.createElement("td");
-                td_new.classList.add("salary");
-                td_new.textContent = employee_inf[2];
-                tr_new.appendChild(td_new);
-
-            input.addEventListener("keydown", function(event) {
-                if (event.key == "Enter") {
-                    staff[j].innerHTML = tr_new;
-                    flag = 0;
-                }
-            });
-            flag = 1;
+    function EditEmployee(edit_btn, x) {
+        let employee_inf = edit_btn.value.split(" ");
+        let td_old = document.querySelectorAll("#table td");
+        let cnt = x*5;
+        let max_cnt = cnt + 3;
+        let i = 0;
+        for (cnt; cnt < max_cnt; cnt++) {
+            let td_new = employee_inf[i];
+            td_old[cnt].textContent = td_new;
+            i++;
         }
+     /*    tr_new = document.createElement("tr");
+        td_new = document.createElement("td");
+            td_new.classList.add("name");
+            td_new = employee_inf[0];
+            num = x*5;
+        td_old[num].textContent = td_new;
+            tr_new.appendChild(td_new);
+        td_new = document.createElement("td");
+            td_new.classList.add("age");
+            td_new = employee_inf[1];
+            num++;
+        td_old[num].textContent = td_new;
+            tr_new.appendChild(td_new);
+        td_new = document.createElement("td");
+            td_new.classList.add("salary");
+            td_new = employee_inf[2];
+            num++;
+        td_old[num].textContent = td_new;
+            tr_new.appendChild(td_new);
+        staff_old[x].innerHTML = tr_new; */
     }
 
     //Функция обновления
-    function Update(flag) {
-        if (flag == 1) {
-
+    function Update() {
+        let staff_new = document.querySelectorAll("#table tr");
+        for (let cnt = staff_old.length; cnt < staff_new.length; cnt++) {
+            CreateEmployeeEditBtn(staff_new, cnt);
+            CreateDeleteBtn(staff_new, cnt);
         }
+        staff_old = staff_new;
+        cnt_edit_btn = document.querySelectorAll(".input");
+        cnt_delete_btn = document.querySelectorAll(".delete_btn");
     }
 }
