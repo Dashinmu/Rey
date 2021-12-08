@@ -1,0 +1,140 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.task-ng-img{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.warpper {
+    display: inline-block;
+}
+
+.swiper-container {
+    width: 350px;
+    height: 300px;
+}
+
+
+.swiper-wrapper {
+    text-align: center;
+}
+
+.swiper-slide {
+    display: table;
+}
+
+.slide-img {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.slide-img img {
+    max-width: 350px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.modal-content {
+    display: block;
+    position: relative;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.mySlides {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    align-self: center;
+    place-self: center;
+    justify-self: center;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    right: 5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.swiper-wrapper {
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: orangered;
+    opacity: 1;
+}
+
+.swipers-first-div {
+    display: inline-block;
+}
+
+:root {
+    --swiper-theme-color: orangered;
+}
+
+.task-product-cards{
+    justify-self: center;
+    padding-bottom: 50px;
+}
+
+.product-card-img{
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.swiper{
+    width: 350px;
+    height: 300px;
+    width: 90%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.product-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-box img{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+}
