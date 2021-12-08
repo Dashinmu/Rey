@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-color: rgb(110, 110, 110);
+    color: snow;
+}
+
+.DivParent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DivChildLeft{
+    width: 40%;
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Tasks {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgb(55, 55, 55);
+    background-color: rgb(55, 55, 55);
+    border-radius: 10px;
+    color: snow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+.DivChildRight {
+    justify-self: left;
+    align-self: center;
+    margin-right: 150px;
+}
+
+img {
+    width: 100px;
+}
+
+.ChangeStyleDiv {
+    width: 300px;
+    height: 50px;
+    border: 2px solid rgb(156, 33, 33);
+    background: rgb(55, 55, 55);
+    font-size: 20px;
+    color: snow;
+}
+
+.HiddenDiv {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+td {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    text-align:center;
+}
+
+select {
+    width: 100px;
+}
+
+.Edit {
+    display: block;
+}
