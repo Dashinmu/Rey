@@ -553,7 +553,7 @@ function task38() {
         <p id = "prgph">text</p>
     `;
     document.querySelector("#button").addEventListener("click", function() {
-        if (document.querySelector("#radio1").checked == true) {
+        if (document.querySelector("#radio1").checked ) {
             document.querySelector("#prgph").textContent = document.querySelector("#radio1").value;
         }
         if (document.querySelector("#radio2").checked == true) {
@@ -1117,7 +1117,8 @@ function task71() {
         tr = document.createElement("tr");
         for (let j = 0; j < arr[i].length; j++) {
             td = document.createElement("td");
-            td.appendChild(document.createTextNode(arr[i][j]));
+            td.textContent = arr[i][j];
+            ///* s */td.appendChild(document.createTextNode(arr[i][j]));
             tr.appendChild(td);
         }
         document.querySelector("#table").appendChild(tr);
@@ -1598,7 +1599,7 @@ function task87() {
     var cnt_edit_btn = document.querySelectorAll(".input");
     var cnt_delete_btn = document.querySelectorAll(".delete_btn");
 
-    
+
     //МЕСТО ДЛЯ ОСНОВНОГО КОДА
     document.querySelector("#new").addEventListener("click", AddNewEmployee);
     for (let i = 0; i < cnt_edit_btn.length; i++) {
@@ -1608,6 +1609,13 @@ function task87() {
             }
         });
     }
+
+    /* for (let j = 0; j < cnt_delete_btn.length; j++) {
+        cnt_delete_btn[j].addEventListener("click", function() {
+            staff_old[j].remove();
+            Update();
+        });
+    } */
     //МЕСТО ДЛЯ ОСНОВНОГО КОДА
 
     
@@ -1631,17 +1639,26 @@ function task87() {
             td_new.textContent = its_salary;
             tr_new.appendChild(td_new);
         document.querySelector("#table").appendChild(tr_new);
+
+
         Update();
     }
 
     //Добавление кнопки удалить сотрудника (для какой-то x строки из элементов cnt)
     function CreateDeleteBtn(cnt, x) {
         let td_delete = document.createElement("td");
-        td_delete.innerHTML =  `<input class = "delete_btn" type = "submit" value = "delete employee">`;
+        td_delete.innerHTML =  `<input class = "delete_btn" id = "persond${x}" type = "submit" value = "delete employee">`;
         /* td_delete.setAttribute("class", "delete_btn");
         td_delete.setAttribute("type", "submit");
         td_delete.setAttribute("value", "delete employee"); */
         cnt[x].appendChild(td_delete)
+    
+
+        let newDelete = document.querySelector(`#persond${x}`);
+        newDelete.addEventListener("click", function() {
+            staff_old[x].remove();
+            Update();
+        });
     };
 
     //Удаление сотрудника
@@ -1649,14 +1666,25 @@ function task87() {
         /* let staff = document.querySelectorAll("#table tr");
         staff[x].remove();
         staff_old = staff; */
-        staff_old[x].remove();
+        /* let staff = document.querySelectorAll("#table tr");
+        staff[x].remove();
+        staff_old = staff; */
     }
 
     //Добавление кнопки редактироания сотрудника
     function CreateEmployeeEditBtn(cnt, x) {
         let td_edit = document.createElement("td");
-        td_edit.innerHTML = `<input class = "input" type = "text" value = "NAME AGE SALARY">`;
+        td_edit.innerHTML = `<input class = "input" id="person${x}" type = "text" value = "NAME AGE SALARY">`;
         cnt[x].appendChild(td_edit);
+        
+        let newInput = document.querySelector(`#person${x}`);
+        newInput.addEventListener("keydown", function(event) {
+            if (event.key == "Enter") {
+                EditEmployee(newInput, x);
+            }
+        });
+
+
     }
 
     //Редактирование сотрудника
@@ -1696,9 +1724,11 @@ function task87() {
     //Функция обновления
     function Update() {
         let staff_new = document.querySelectorAll("#table tr");
-        for (let cnt = staff_old.length; cnt < staff_new.length; cnt++) {
-            CreateEmployeeEditBtn(staff_new, cnt);
-            CreateDeleteBtn(staff_new, cnt);
+        if (staff_old.length < staff_new.length) {
+            for (let cnt = staff_old.length; cnt < staff_new.length; cnt++) {
+                CreateEmployeeEditBtn(staff_new, cnt);
+                CreateDeleteBtn(staff_new, cnt);
+            }
         }
         staff_old = staff_new;
         cnt_edit_btn = document.querySelectorAll(".input");
