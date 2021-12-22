@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="plugins/Swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="plugins/Photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="plugins/Photoswipe/default-skin/default-skin.css">
     <link rel="stylesheet" href="style.css">
-    <title>lab7</title>
-</head>
-<body>
 
-    <section class="task-ng-img">
-        <div class="wrapper">
-            <div class="swiper-container swiper1">
+
+</head>
+
+<body>
+    <h2 class="swiper-h2">Progress Slider</h2>
+    <section class="swipers-first">
+        <div class="swipers-first-div">
+            <div class="swiper-container swiper-container1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng1.jpg" onclick="openModal();currentSlide(1)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng2.jpeg" onclick="openModal();currentSlide(2)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng3.png" onclick="openModal();currentSlide(3)">
-                        </div>
-                    </div>
+                    <div class="swiper-slide"><img src="img/ng1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ng2.jpeg"></div>
+                    <div class="swiper-slide"><img src="img/ng3.png"></div>
                 </div>
                 <div class="swiper-pagination swiper-pagination1"></div>
                 <div class="swiper-button-prev swiper-button-prev1"></div>
@@ -37,24 +32,12 @@
             </div>
         </div>
 
-        <div class="wrapper">
-            <div class="swiper-container swiper2">
+        <div class="swipers-first-div">
+            <div class="swiper-container swiper-container2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng1.jpg" onclick="openModal();currentSlide(1)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng2.jpeg" onclick="openModal();currentSlide(2)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng3.png" onclick="openModal();currentSlide(3)">
-                        </div>
-                    </div>
+                    <div class="swiper-slide"><img src="img/ng1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ng2.jpeg"></div>
+                    <div class="swiper-slide"><img src="img/ng3.png"></div>
                 </div>
                 <div class="swiper-pagination swiper-pagination2"></div>
                 <div class="swiper-button-prev swiper-button-prev2"></div>
@@ -62,196 +45,347 @@
             </div>
         </div>
 
-        <div class="wrapper">
-            <div class="swiper-container swiper3">
+        <div class="swipers-first-div">
+            <div class="swiper-container swiper-container3">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng1.jpg" onclick="openModal();currentSlide(1)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng2.jpeg" onclick="openModal();currentSlide(2)">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-img">
-                            <img src="img/ng3.png" onclick="openModal();currentSlide(3)">
-                        </div>
-                    </div>
+                    <div class="swiper-slide"><img src="img/ng1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ng2.jpeg"></div>
+                    <div class="swiper-slide"><img src="img/ng3.png"></div>
                 </div>
                 <div class="swiper-pagination swiper-pagination3"></div>
             </div>
         </div>
+    </section>
 
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">x</span>
-    
-            <div class="modal-content">
-                <div class="mySlides">
-                    <img src="img/ng1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/ng2.jpeg" style="width:100%">
-                </div>
-                <div class="mySlides">
-                    <img src="img/ng3.png" style="width:100%">
-                </div>
-            </div>
+    <section class="photoswipe__example">
+        <h2 class="swiper-h2">Gallery</h2>
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/ng1.jpg" itemprop="contentUrl" data-size="960x640">
+                    <img src="img/ng1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/ng2.jpeg" itemprop="contentUrl" data-size="975x640">
+                    <img src="img/ng2.jpeg" itemprop="thumbnail" alt="Image description" />
+                </a>
+            </figure>
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/ng3.png" itemprop="contentUrl" data-size="1140x640">
+                    <img src="img/ng3.png" itemprop="thumbnail" alt="Image description" />
+                </a>
+            </figure>
         </div>
     </section>
 
-    <section class="task-product-cards">
-        <div class="wrapper">
-            <div class="swiper-container swiper">
+    <section class="photoswipe__swiper">
+        <div class="swipers-first-div">
+            <h2 class="swiper-h2">Slider + Photoswipe</h2>
+            <div class="swiper-container swiper-container4">
                 <div class="swiper-wrapper">
+
                     <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/lil-shkaf.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф малый
-                                </div>
-                                <div class="ProductCard-Price">
-                                    20799
-                                </div>
-                            </div>
+                        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="img/ng1.jpg" itemprop="contentUrl" data-size="960x640">
+                                    <img src="img/ng1.jpg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                            </figure>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-end-olvia.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Olivia
-                                </div>
-                                <div class="ProductCard-Price">
-                                    21399
-                                </div>
-                            </div>
+                        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="img/ng2.jpeg" itemprop="contentUrl" data-size="975x640">
+                                    <img src="img/ng2.jpeg" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                            </figure>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-linate.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Linate
-                                </div>
-                                <div class="ProductCard-Price">
-                                    29199
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-blijburg.jpeg"></img>
-                        </div>
-                        <div class="ProductCard-Content">
-                            <div class="ProductCard-Title">
-                                Шкаф Blijburg
-                            </div>
-                            <div class="ProductCard-Price">
-                                99999
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-summit.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Summit
-                                </div>
-                                <div class="ProductCard-Price">
-                                    5499
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/skaf-jazz.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Jazz
-                                </div>
-                                <div class="ProductCard-Price">
-                                    17999
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/tumba-linate.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Тумба Linate
-                                </div>
-                                <div class="ProductCard-Price">
-                                    14699
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-paola.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Paola
-                                </div>
-                                <div class="ProductCard-Price">
-                                    13499
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-box">
-                            <div class="product-card-img">
-                                <img src="img/shkaf-provence.jpeg"></img>
-                            </div>
-                            <div class="ProductCard-Content">
-                                <div class="ProductCard-Title">
-                                    Шкаф Provence
-                                </div>
-                                <div class="ProductCard-Price">
-                                    15999
-                                </div>
-                            </div>
+                        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="img/ng3.png" itemprop="contentUrl" data-size="1140x640">
+                                    <img src="img/ng3.png" itemprop="thumbnail" alt="Image description" />
+                                </a>
+                            </figure>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination swiper-pagination4"></div>
+                <div class="swiper-button-prev swiper-button-prev4"></div>
+                <div class="swiper-button-next swiper-button-next4"></div>
             </div>
         </div>
-        
     </section>
-    
+
+    <section class="products__cards">
+        <h2 class="swiper-h2">Product Cards</h2>
+
+        <div class="swiper-container swiper-container5">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/lil-shkaf.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/lil-shkaf.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <h1>Шкаф малый</h1>
+                        </div>
+
+                        <div class="product__price">
+                            <p>20799</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-end-olvia.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-end-olvia.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Olivia</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>21399</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-linate.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-linate.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Linate</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>29199</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-blijburg.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-blijburg.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Blijburg</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>99999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-summit.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-summit.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Summit</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>5499</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/skaf-jazz.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/skaf-jazz.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Jazz</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>17999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/tumba-linate.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/tumba-linate.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Тумба Linate</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>14699</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-paola.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-paola.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Paola</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>13499</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="product__box">
+                        <div class="product__image">
+                            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="img/shkaf-provence.jpeg" itemprop="contentUrl" data-size="960x640">
+                                        <img src="img/shkaf-provence.jpeg" itemprop="thumbnail" alt="Image description" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="product__info">
+                            <p>Шкаф Provence</p>
+                        </div>
+
+                        <div class="product__price">
+                            <p>15999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination5"></div>
+            <div class="swiper-button-prev swiper-button-prev5"></div>
+            <div class="swiper-button-next swiper-button-next5"></div>
+        </div>
+        <!-- </div> -->
+
+
+
+
+    </section>
+
+
+    <section>
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="plugins/Swiper/swiper-bundle.min.js"></script>
+    <script src="plugins/Photoswipe/photoswipe.min.js"></script>
+    <script src="plugins/Photoswipe/photoswipe-ui-default.min.js"></script>
     <script src="script.js"></script>
-    
 </body>
+
 </html>
