@@ -20,7 +20,7 @@ function task2() {
     })
 }
 
-function task3() {
+function task3_edit() {
     element.innerHTML = `
     <button class = "button">Button</button>
 `;
