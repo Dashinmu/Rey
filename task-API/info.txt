@@ -1,0 +1,44 @@
+stdClass Object
+(
+    [result] => stdClass Object
+        (
+            [count] => 2
+            [start] => 0
+            [rows] => 10
+            [items] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [vri_id] => 1-32919802
+                            [org_title] => ООО "СИМС-2"
+                            [mit_number] => 69558-17
+                            [mit_title] => Анализаторы паров этанола в выдыхаемом воздухе
+                            [mit_notation] => Динго B-01
+                            [mi_modification] => Динго B-01
+                            [mi_number] => GBKAN0086
+                            [verification_date] => 21.01.2021
+                            [valid_date] => 20.07.2021
+                            [result_docnum] => С-ДВФ/21-01-2021/32919802
+                            [applicability] => 1
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [vri_id] => 1-107864235
+                            [org_title] => ООО "СИМС-2"
+                            [mit_number] => 69558-17
+                            [mit_title] => Анализаторы паров этанола в выдыхаемом воздухе
+                            [mit_notation] => Динго B-01
+                            [mi_modification] => Динго В-01
+                            [mi_number] => GBKAN0086
+                            [verification_date] => 09.11.2021
+                            [valid_date] => 08.05.2022
+                            [result_docnum] => С-ДВФ/09-11-2021/107864235
+                            [applicability] => 1
+                        )
+
+                )
+
+        )
+
+)
