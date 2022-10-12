@@ -1,0 +1,536 @@
+.T1DivParent{
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    border: 2px dotted black;
+    margin-bottom: 20px;
+}
+
+.T1DivChildRed{
+    background: red;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    margin-right: 2px;
+}
+
+.T1DivChildRedEnd{
+    background: red;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+}
+
+.T1DivChildGreen{
+    background: green;
+    border: 1px solid green;
+    width: 50px;
+    height: 50px;
+    margin-right: 2px;
+    position: relative;
+        top: 10px;
+        left: 10px;
+}
+
+.T2DivParent{
+    width: auto;
+}
+
+.T2DivChildRed{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgb(194, 101, 101);
+    background: rgb(194, 101, 101);
+}
+
+.T2DivChildBlue{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 2;
+    top: -20px;
+    left: 20px;
+    border: 1px solid rgb(89, 89, 185);
+    background: rgb(89, 89, 185);
+}
+
+.T2DivChildGreen{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 3;
+    top: -40px;
+    left: 40px;
+    border: 1px solid rgb(62, 199, 119);
+    background: rgb(62, 199, 119);
+}
+
+.T3DivParent{
+    border: 2px solid rgb(81, 68, 192);
+    width: 70%;
+}
+
+.T3DivChildBlock{
+    border: 1px solid white;
+    background: white;
+    display: inline;
+    width: auto;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    top: -20px;
+    left: 40px;
+}
+
+.T3DivChildText{
+    margin: 10px;
+    text-align: justify;
+}
+
+.T4DivParent{
+    border: 3px solid black;
+    margin-top: 20px;
+    position: relative;
+    width: 99%;
+    height: 150px;
+    display: inline-flex;
+    z-index: 1;
+}
+
+.T4DivChildRedLeft{
+    border: 1px solid red;
+    position: absolute;
+    left: 0%;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+}
+
+.T4DivChildRedRight{
+    border: 1px solid red;
+    position: absolute;
+    right: 0%;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+}
+
+.T4DivChildGreenLeft{
+    border: 1px solid green;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+}
+
+.T4DivChildGreenRight{
+    border: 1px solid green;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+}
+
+.T5DivParent{
+    margin-top: 20px;
+    display: inline-flex;
+    border: 2px dotted black;
+    position: relative;
+}
+
+.T5DivChildRed{
+    border: 1px solid red;
+    background: red;
+    height: 50px;
+    width: 50px;
+    margin-right: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.T5DivChildRedEnd{
+    border: 1px solid red;
+    background: red;
+    height: 50px;
+    width: 50px;
+}
+
+.T5DivChildGreen{
+    border: 1px solid green;
+    background: green;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.T6DivParent{
+    margin-top: 20px;
+    position: relative;
+}
+
+.T6DivChildCircleGreen{
+    border: 1px solid green;
+    background: green;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+}
+
+.T6DivChildCircleRed{
+    border: 1px solid red;
+    background: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 24%;
+    top: 23%;
+    z-index: 2;
+}
+
+.T7DivParent{
+    margin-top: 150px;
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    position: relative;
+}
+
+.T7DivChild{
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.T8DivParent{
+    margin-top: 20px;
+    border: 2px solid rgb(81, 68, 192);
+    width: 70%;
+    position: relative;
+}
+
+.T8DivChildBlock{
+    border: 1px solid white;
+    background: white;
+    display: inline;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: -20px;
+    left: 40px;
+}
+
+.T8DivChildText{
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.T9DivParent{
+    margin-top: 40px;
+    width: 50%;
+    position: relative;
+}
+
+.T9DivParent a{
+    border: 2px solid orange;
+    border-radius: 40px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin: auto;
+}
+
+.T9DivParent a:hover{
+    border: 2px solid orange;
+    border-radius: 40px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background: orange;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin: auto;
+}
+
+.T9DivParent span{
+    padding: 3px;
+    font-size: 9px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid black;
+    background-color: orange;
+    border-radius: 20px;
+    position: absolute;
+    top: -25%;
+    left: 35%;
+}
+
+.T10DivParent{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 1px solid lightgreen;
+    background-color: lightgreen;
+}
+
+.T10DivChildTop{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.T10DivChildBottom{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.T11DivParent{
+    margin-top: 20px;
+    position: relative;
+}
+
+.T11DivChildRed{
+    border: 1px solid black;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.T11DivChildYellow{
+    border: 1px solid black;
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+}
+
+.T11DivChildGreen{
+    border: 1px solid black;
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+}
+
+.T12DivParent{
+    margin-left: 200px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid lime;
+    background-color: lime;
+    border-radius: 50%;
+    position: relative;
+}
+
+.T12DivChildEyeL{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.T12DivChildEyeR{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.T12DivChildNose{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+.T12DivChildMouth{
+    width: 200px;
+    height: 30px;
+    border: 1px solid snow;
+    background-color: snow;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+
+.T13DivParent{
+    margin-top: 20px;
+    margin-left: 200px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid yellow;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    z-index: 0;
+}
+
+.T13DivChildEyeL{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.T13DivChildEyeR{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    background-color: snow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.T13DivChildNose{
+    width: 50px;
+    height: 50px;
+    border: 1px solid snow;
+    border-radius: 50%;
+    background-color: snow;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+.T13DivChildMouth{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    width: 200px; 
+    height: 90px; 
+    border-radius: 50%;
+    box-shadow: 0 15px 0 0 snow;
+}
+
+.T14DivParent{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 500px;
+    border: 1px solid lightgreen;
+    position: relative;
+}
+
+.T14DivChildR{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    position: absolute;
+    right: -100px;
+}
+
+.T14DivChildL{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    position: absolute;
+    left: -100px;
+}
+
+.T15DivChildText{
+    margin-top: 20px;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    text-align: justify;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.T15DivChild{
+    padding: 5px;
+    border: 5px solid black;
+    position: fixed;
+    left: 85%;
+    top: 10%;
+}
+
+.T15DivChildHref{
+    width: 100%;
+    border: 1px solid lightsteelblue;
+    background: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.T15DivChildHref a{
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

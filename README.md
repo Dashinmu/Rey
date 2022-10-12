@@ -1,2 +1,2 @@
 # Rey
- HTML/CSS/JS
+> whaaa, you f*cked up

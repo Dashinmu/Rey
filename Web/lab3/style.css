@@ -1,0 +1,56 @@
+.Slide{
+    padding: 40px;
+}
+
+.Main{
+    border: 2px solid black;
+    padding: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.Main img{
+    width: 300px;
+    border: 2px solid black;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.Main p{
+    text-align: justify;
+}
+
+.Link{
+    text-align: right;
+}
+
+.Menu{
+    border: 1px solid lightpink;
+    background-color: lightpink;
+    width: 500px;
+    height: 34px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    left: 34%;
+}
+
+.Menu a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.Image{
+    padding: 5px;
+    border: 5px solid black;
+    position: fixed;
+    left: 85%;
+    top: 10%;
+}
